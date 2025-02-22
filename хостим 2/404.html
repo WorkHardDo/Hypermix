@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../web/images/icon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Hypermix studio</title>
+    <link rel="stylesheet" href="../web/css/style_404.css">
+</head>
+
+<header class="site-header">
+    <a href="index.html">
+        <img id="header-logo" src="../web/images/main_header_logo.png" alt="Header Logo">
+    </a>
+    <nav class="desktop-menu">
+    <button class="header-button" id="mix-button" onclick="location.href='mix.html'">Сведение</button>
+    <button class="header-button" id="mastering-button" onclick="location.href='mastering.html'">Мастеринг</button>
+    <button class="header-button" id="contacts-button" onclick="toggleContainer()">Контакты</button>
+    </nav>
+    <!-- Бургер-меню -->
+    <div class="burger-menu" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Мобильное меню -->
+    <nav class="mobile-menu">
+        <a href="mix.html">Сведение</a>
+        <a href="mastering.html">Мастеринг</a>
+        <a href="#" onclick="toggleContainer()">Контакты</a>
+    </nav>
+    </header>
+
+<body>
+<div class="wrapper">
+    
+<main class="main">
+
+   <!-- Контейнер, который открывается при нажатии на кнопку -->
+   <div class="container" id="container" style="display: none;">
+    <div class="container-links">
+    <a >hypermix-studio@yandex.ru</a>
+    <a href="https://t.me/hypermix" class="telegram-link">
+        @hypermix_tg
+        <img src="../web/images/telegram_icon.png" alt="Telegram" class="social-icon">
+    </a>
+    <a href="https://www.instagram.com/hypermix" class="instagram-link">
+        @hypermix_ig
+        <img src="../web/images/instagram_icon.png" alt="Instagram" class="social-icon">
+    </a>
+    </div>
+
+</div>
+
+
+    <div class="error-container">
+        <h1 class="error-title">404: Страница не найдена</h1>
+    
+        
+    </div>
+    <button class="order-mix-button" onclick="location.href='index.html'">На главную</button>
+
+    
+<img id="footer-up-image" src="../web/images/footer_up.png" alt="Footer Background">
+</main>
+
+
+
+
+
+<footer class="footer">
+
+
+    <div class="footer-columns">
+
+        <div class="footer-column">
+            <img src="../web/images/main_header_logo.png" alt="Footer Logo" class="footer-logo">
+            <div class="footer-tagline">"Frik the sound!"</div>
+            <div class="footer-copyright">© 2024, All rights reserved</div>
+        </div>
+
+        <!-- Contacts Column -->
+        <div class="footer-contacts" >
+            <h3 class="footer-title">Контакты</h3>
+            <div class="footer-links">
+                <a >hypermix-studio@yandex.ru</a>
+                <a href="https://t.me/hypermix" class="telegram-link">
+                    @hypermix_tg
+                    <img src="../web/images/telegram_icon.png" alt="Telegram" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/hypermix" class="instagram-link">
+                    @hypermix_ig
+                    <img src="../web/images/instagram_icon.png" alt="Instagram" class="social-icon">
+                </a>
+                
+            </div>
+        </div>
+        
+        <!-- Sections Column -->
+        
+        <div class="footer-column">
+            <div class="footer-column-sections">
+            <h3 class="footer-title">Разделы</h3>
+            <div class="footer-links">
+                <a href="index.html#our-orders-text">Все услуги</a>
+                <a href="mix.html" onclick="location.href='mix.html'">Сведение</a>
+                <a href="mastering.html" onclick="location.href='mastering.html'">Мастеринг</a>
+                <a href="index.html#work-examples-text">Примеры работ</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</footer>
+
+</div>
+
+
+</body>
+
+<script>
+
+    // Функция для открытия и закрытия контейнера
+    function toggleContainer() {
+const container = document.getElementById('container');
+const currentDisplay = window.getComputedStyle(container).display;
+
+if (currentDisplay === 'none') {
+    container.style.display = 'block'; // Показываем контейнер
+} else {
+    container.style.display = 'none'; // Скрываем контейнер
+}
+}
+
+
+
+function toggleMobileMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    const burger = document.querySelector('.burger-menu');
+    const contactContainer = document.getElementById('container');
+
+    // Переключение состояния мобильного меню
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+
+    // Анимация бургер-иконки
+    burger.classList.toggle('open');
+
+    // Закрытие контейнера контактов, если он открыт
+    if (contactContainer.style.display === 'block') {
+        contactContainer.style.display = 'none';
+    }
+}
+</script>
+</html>
