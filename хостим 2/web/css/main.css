@@ -207,25 +207,7 @@ height: calc((100vw * 0.52 + 13.3vw) + 28.5vw + 13.3vw + 25vw + 6.6vw);
     position: absolute;
 }
 
-#line1 {
-    top: 1.53vw;
-    left: 2vw;
-}
 
-#line2 {
-    top: 4.4vw;
-    left: 2vw;
-}
-
-#line3 {
-    top: 7.27vw;
-    left: 2vw;
-}
-
-#line4 {
-    top: 10.1vw;
-    left: 2vw;
-}
 
 .container-links {
     display: flex;
@@ -305,7 +287,7 @@ height: calc((100vw * 0.52 + 13.3vw) + 28.5vw + 13.3vw + 25vw + 6.6vw);
 }
 
 #work-examples-text, #our-orders-text {
-    font-size: 3.3vw;
+    font-size: 3.5vw;
   }
   
 
@@ -413,6 +395,7 @@ height: calc((100vw * 0.52 + 13.3vw) + 28.5vw + 13.3vw + 25vw + 6.6vw);
     align-items: center; /* Выравнивание по центру */
     width: 100%; /* Использует ширину контейнера */
     margin-top: 0.5vw; /* Задайте фиксированный отступ */
+    z-index: 1001;
 }
 
 .track-name {
@@ -795,7 +778,7 @@ color: black;
 
 /* Слоган */
 .footer-tagline {
-    font-size: 1.66vw;
+    font-size: 2vw;
     color: #B752FD;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
@@ -837,6 +820,7 @@ color: black;
     width: 2.3vw; /* Размер иконки */
     height: auto;
     margin-left: 10px; /* Отступ между текстом и иконкой */
+    z-index: 1001;
 }
 
 .instagram-link {
@@ -898,7 +882,6 @@ color: black;
 .overlay {
     display: none; /* По умолчанию скрыто */
     position: fixed;
-    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
